@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 mx-auto mt-4 mb-4 col-sm-8" [@expand]>
+            <div class="card profile-card-5">
+                <div class="card-body pt-4">
+                    <h5 class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+                    <p class="card-text">{{user.email}}</p>
+                    <p class="card-text ">{{user.userName}}</p>
+                    <p class="card-text">{{user.address}}</p>
+                    <p class="card-text">{{user.telephoneNumber}}</p>
+                    <p class="card-text">{{user.birthDate}}</p>
+                    
+                    <a [routerLink]="['']" class="btn btn-dark" style="color: white;">Go to All Users</a>
+                </div><!-- card body -->
+            </div> <!-- Card -->
+        </div>
+    </div><!-- row -->
