@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() {}
 
-  //iscollapsed handle responsive mode for the humburger button to be collapsed
+  // iscollapsed handle responsive mode for the humburger button to be collapsed
   isCollapsed = true;
 
   ngOnInit(): void {

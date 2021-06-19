@@ -5,9 +5,9 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { UsersListComponent } from './components/users-list/users-list.component';
 
 const routes: Routes = [
-  {path: '', component:UsersListComponent},
-  {path: 'edit/:id', component:UserEditComponent },
-  {path: 'profile/:id', component:UserProfileComponent }
+  {path: '', component: UsersListComponent},
+  {path: 'edit/:id', component: UserEditComponent },
+  {path: 'profile/:id', component: UserProfileComponent }
 
 ];
 

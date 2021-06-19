@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from "@angular/material/dialog";
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,12 +17,12 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,
+    AppRoutingModule, HttpClientModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule,NgbModule
+    ReactiveFormsModule, NgbModule
   ],
   declarations: [
     AppComponent,
@@ -32,9 +32,9 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     UserEditComponent,
 
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule { }

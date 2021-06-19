@@ -16,12 +16,12 @@ export class UsersListComponent implements OnInit {
   usersList: userResponse[];
   title: string;
 
-firstname="ahmed"
+firstname = 'ahmed';
   constructor(
     private usersService: UsersService,
     private toastr: ToastrService,
     private modalService: NgbModal,
-    private route:Router
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -56,14 +56,14 @@ firstname="ahmed"
         .subscribe(
           (data: userResponse) => {
             this.usersList.push(data);
-            this.modalService.dismissAll()
+            this.modalService.dismissAll();
             this.toastr.success('Added successfully');
           },
           () => {
             this.toastr.error('Failed to add this user try  another username and email');
           });
     } else {
-      const updatedUser: userResponse ={
+      const updatedUser: userResponse = {
         address: form.value.address,
         birthDate: form.value.birthDate,
         email: form.value.email,
@@ -73,12 +73,12 @@ firstname="ahmed"
         password: form.value.password,
         telephoneNumber: form.value.telephoneNumber,
         userName: form.value.userName
-      }
-      this.usersService.updateUser(updatedUser,this.usersList[index].id).subscribe(()=>{
-        this.toastr.success("the user updated successfully");
-      },()=>{
-        this.toastr.error("Failed to update this user")
-      })
+      };
+      this.usersService.updateUser(updatedUser, this.usersList[index].id).subscribe(() => {
+        this.toastr.success('the user updated successfully');
+      }, () => {
+        this.toastr.error('Failed to update this user');
+      });
 
     }
   }
@@ -89,7 +89,7 @@ firstname="ahmed"
 
 
   removeUser(index: number) {
-    var confirmation = confirm('Are you sure you want to remove this user?');
+    const confirmation = confirm('Are you sure you want to remove this user?');
     if (confirmation == true) {
       this.usersService.removeUser(this.usersList[index].id).subscribe(
         () => {
@@ -103,8 +103,8 @@ firstname="ahmed"
     } else {
     }
   }
-  updateUser(index:number){
-    this.route.navigate(['edit',this.usersList[index].id])
+  updateUser(index: number){
+    this.route.navigate(['edit', this.usersList[index].id]);
 
   }
 }

@@ -10,16 +10,16 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  userId:number;
-  user:userResponse;
-  constructor(private usersService:UsersService,private activatedRoute:ActivatedRoute,   private toastr: ToastrService,) { }
+  userId: number;
+  user: userResponse;
+  constructor(private usersService: UsersService, private activatedRoute: ActivatedRoute,   private toastr: ToastrService, ) { }
 
   ngOnInit(): void {
-    this.userId=parseInt (this.activatedRoute.snapshot.params.id);
-    this.usersService.getUserById(this.userId).subscribe((data:userResponse)=>{
-      this.user=data;
-    },()=>{
-      this.toastr.error("Failed to Load this User")
+    this.userId = parseInt (this.activatedRoute.snapshot.params.id);
+    this.usersService.getUserById(this.userId).subscribe((data: userResponse) => {
+      this.user = data;
+    }, () => {
+      this.toastr.error('Failed to Load this User');
     });
 
   }
